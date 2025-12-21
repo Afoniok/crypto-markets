@@ -6,7 +6,6 @@ const MarketMaking = () => {
     <section className="market-making">
       <div className="market-making-container">
 
-        {/* ===== SECTION HEADER ===== */}
         <div className="market-making-header">
           <h2>Crypto Market Making</h2>
           <p>
@@ -16,7 +15,6 @@ const MarketMaking = () => {
           </p>
         </div>
 
-        {/* ===== BLOCK 1 ===== */}
         <div className="market-making-block">
           <div className="market-making-text">
             <h3>Market Making for Crypto Projects</h3>
@@ -41,7 +39,6 @@ const MarketMaking = () => {
           </div>
         </div>
 
-        {/* ===== BLOCK 2 ===== */}
         <div className="market-making-block reverse">
           <div className="market-making-visual">
           <img src="./src/assets/div-2.png" alt="Visual 1" />
