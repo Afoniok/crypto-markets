@@ -65,4 +65,5 @@
     background: linear-gradient(90deg, #6aa9ff, #f4d06f);
     cursor: pointer;
     white-space: nowrap;
+    list-style: none;
   }

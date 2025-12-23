@@ -14,8 +14,8 @@ const Navbar = () => {
           <li className="navbar-item">Our Services</li>
           <li className="navbar-item">Work With Us</li>
           <li className="navbar-item">Blog</li>
-          <li className="navbar-cta">Get In Touch</li>
         </ul>
+        <li className="navbar-cta">Get In Touch</li>
       </div>
     </nav>
   );
