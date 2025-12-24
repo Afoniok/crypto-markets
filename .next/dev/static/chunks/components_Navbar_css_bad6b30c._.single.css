@@ -1,0 +1,95 @@
+/* [project]/components/Navbar.css [app-client] (css) */
+.navbar {
+  z-index: 10;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: linear-gradient(#0b0e13d9, #0b0e1300);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-logo {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.navbar-logo img {
+  width: 132px;
+  height: auto;
+  padding: 5px;
+}
+
+.navbar-container {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 64px;
+  display: flex;
+}
+
+.navbar-menu {
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  display: flex;
+}
+
+.navbar-item {
+  color: #cfd3da;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color .2s;
+}
+
+.navbar-item:hover {
+  color: #fff;
+}
+
+.navbar-cta {
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #6aa9ff, #f4d06f);
+  border-radius: 20px;
+  padding: 10px 18px;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 12px 24px;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .navbar-logo img {
+    width: 100px;
+  }
+
+  .navbar-item {
+    font-size: 12px;
+  }
+
+  .navbar-cta {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-menu {
+    gap: 12px;
+  }
+}
+
+/*# sourceMappingURL=components_Navbar_css_bad6b30c._.single.css.map*/

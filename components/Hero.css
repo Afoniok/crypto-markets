@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0e13;
+  overflow-x: hidden;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      800px 400px at 50% -120px,
+      rgba(255, 255, 255, 0.12),
+      transparent
+    ),
+    #0b0e13;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 140px 64px 80px;
+  position: relative;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: clamp(44px, 5vw, 64px);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+.hero-description {
+  max-width: 520px;
+  margin: 0 auto 48px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #b5bcc7;
+}
+
+.hero-button {
+  padding: 14px 42px;
+  border: none;
+  background: linear-gradient(90deg, #6aa9ff, #9b6cff, #f4d06f);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(106, 169, 255, 0.35);
+}
+
+/* Responsive fixes for Next.js */
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 24px 60px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+}
