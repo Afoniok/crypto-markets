@@ -1,0 +1,348 @@
+/* [project]/Desktop/my-react-app/components/Navbar.css [app-client] (css) */
+.navbar {
+  z-index: 10;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  background: linear-gradient(#0b0e13d9, #0b0e1300);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-logo {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.navbar-logo img {
+  width: 132px;
+  height: auto;
+  padding: 5px;
+}
+
+.navbar-container {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 64px;
+  display: flex;
+}
+
+.navbar-menu {
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  display: flex;
+}
+
+.navbar-item {
+  color: #cfd3da;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color .2s;
+}
+
+.navbar-item:hover {
+  color: #fff;
+}
+
+.navbar-cta {
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #6aa9ff, #f4d06f);
+  border-radius: 20px;
+  padding: 10px 18px;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 12px 24px;
+  }
+
+  .navbar-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .navbar-logo img {
+    width: 100px;
+  }
+
+  .navbar-item {
+    font-size: 12px;
+  }
+
+  .navbar-cta {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-menu {
+    gap: 12px;
+  }
+}
+
+/* [project]/Desktop/my-react-app/components/Hero.css [app-client] (css) */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #0b0e13;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hero {
+  text-align: center;
+  background: radial-gradient(800px 400px at 50% -120px, #ffffff1f, #0000), #0b0e13;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 140px 64px 80px;
+  display: flex;
+  position: relative;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  color: #fff;
+  letter-spacing: -.02em;
+  margin-bottom: 28px;
+  font-size: clamp(44px, 5vw, 64px);
+  font-weight: 700;
+}
+
+.hero-description {
+  color: #b5bcc7;
+  max-width: 520px;
+  margin: 0 auto 48px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-button {
+  color: #fff;
+  letter-spacing: .15em;
+  cursor: pointer;
+  background: linear-gradient(90deg, #6aa9ff, #9b6cff, #f4d06f);
+  border: none;
+  padding: 14px 42px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.hero-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px #6aa9ff59;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 24px 60px;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+}
+
+/* [project]/Desktop/my-react-app/components/About.css [app-client] (css) */
+.about {
+  color: #fff;
+  background-color: #0b0e13;
+  width: 100%;
+  padding: 140px 24px;
+}
+
+.about-container {
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.about-title {
+  margin-bottom: 32px;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.about-description {
+  color: #b5bcc7;
+  max-width: 800px;
+  margin: 0 auto 80px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.stats-grid {
+  text-align: left;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  display: grid;
+}
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  border: 1px solid #1f2430;
+  padding: 32px 24px;
+}
+
+.stat-card--highlight {
+  color: #fff;
+  background: linear-gradient(135deg, #6aa9ff, #9b6cff, #f4d06f);
+}
+
+.stat-title {
+  margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stat-description {
+  color: #b5bcc7;
+  font-size: 14px;
+}
+
+.stat-card--highlight .stat-description {
+  color: #fff;
+}
+
+/* [project]/Desktop/my-react-app/components/MarketMaking.css [app-client] (css) */
+.market-making {
+  background: radial-gradient(700px 500px at 20%, #7882ff40, #0000), radial-gradient(600px 400px at 80% 80%, #7882ff33, #0000), #0b0e13;
+  width: 100%;
+  padding: 160px 64px;
+}
+
+.market-making-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.market-making-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 140px;
+}
+
+.market-making-header h2 {
+  color: #fff;
+  margin-bottom: 24px;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+}
+
+.market-making-header p {
+  color: #b5bcc7;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.market-making-block {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 120px;
+  margin-bottom: 160px;
+  display: grid;
+}
+
+.market-making-text h3 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+}
+
+.market-making-text strong {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+}
+
+.market-making-text p {
+  color: #b5bcc7;
+  max-width: 520px;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.learn-more {
+  color: #fff;
+  border-bottom: 1px solid #ffffff4d;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity .2s;
+  display: inline-flex;
+}
+
+.learn-more:hover {
+  opacity: .8;
+}
+
+.market-making-visual img {
+  object-fit: contain;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+@media (max-width: 1024px) {
+  .market-making {
+    padding: 120px 32px;
+  }
+
+  .market-making-block, .market-making-block.reverse {
+    text-align: center;
+    grid-template-columns: 1fr;
+    gap: 64px;
+  }
+
+  .market-making-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*# sourceMappingURL=Desktop_my-react-app_components_e7c474dd._.css.map*/
