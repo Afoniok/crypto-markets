@@ -1,8 +1,9 @@
 import "./MarketMaking.css";
 import Link from "next/link";
 import Image from "next/image";
+import { JSX } from "react";
 
-// You can later reuse these types if you want props
+
 type MarketBlock = {
   title: string;
   subtitle: string;
@@ -12,8 +13,7 @@ type MarketBlock = {
   reverse?: boolean;
 };
 
-export default function MarketMaking(): JSX.Element {
-  // typed content data
+export default function MarketMaking(){
   const header: { title: string; description: string; countries: number } = {
     title: "Crypto Market Making",
     description:
@@ -82,5 +82,5 @@ export default function MarketMaking(): JSX.Element {
 
       </div>
     </section>
-  );
+  ) as JSX.Element;
 }

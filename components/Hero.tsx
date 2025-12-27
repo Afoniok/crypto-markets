@@ -1,7 +1,8 @@
-import React from "react";
+import React, { JSX } from "react";
 import "./Hero.css";
 
-const Hero = () => {
+// No props for now, but you can type them if needed
+const Hero = (): JSX.Element => {
   return (
     <section className="hero">
       <div className="hero-content">

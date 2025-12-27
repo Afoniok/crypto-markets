@@ -1,6 +1,15 @@
+import { JSX } from "react";
 import "./About.css";
 
-const stats = [
+// Define a type for each stat item
+type Stat = {
+  title: string;
+  description: string;
+  highlight?: boolean;
+};
+
+// Typed array of stats
+const stats: Stat[] = [
   { title: "~$100 billion", description: "cumulative trading volume to date" },
   { title: "0.8%", description: "of the global crypto spot trading volume", highlight: true },
   { title: "~30", description: "Gravity Teammates (& growing)" },
@@ -11,7 +20,7 @@ const stats = [
   { title: "5 billion+", description: "trades done to date" },
 ];
 
-export default function About() {
+export default function About(): JSX.Element {
   return (
     <section className="about">
       <div className="about-container">
@@ -38,4 +47,4 @@ export default function About() {
       </div>
     </section>
   );
-}
+} 
