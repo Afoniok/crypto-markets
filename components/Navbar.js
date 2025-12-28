@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import Link from "next/link";
+import { Button } from "@/components/ui/button"
 
 export default function Navbar() {
   return (
@@ -8,6 +9,7 @@ export default function Navbar() {
 
         <div className="navbar-logo">
           <img src="/logo-light.png" alt="Logo" />
+          
         </div>
 
         <ul className="navbar-menu">
@@ -17,7 +19,14 @@ export default function Navbar() {
           <li className="navbar-item"><Link href="/blog">Blog</Link></li>
         </ul>
 
-        <Link href="#contact" className="navbar-cta">Get In Touch</Link>
+        <Link href="#contact" >
+        <Button
+  variant="default"
+  className="bg-gradient-to-r from-[#6aa9ff] to-[#f4d06f] text-white text-sm rounded-[20px] py-[10px] px-[18px] whitespace-nowrap"
+>
+  Get In Touch
+</Button>
+        </Link>
 
       </div>
     </nav>

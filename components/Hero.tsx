@@ -1,5 +1,9 @@
 import React, { JSX } from "react";
 import "./Hero.css";
+import { Button } from "@/components/ui/button"
+import { Card, CardTitle, CardDescription } from "@/components/ui/card"
+
+
 
 // No props for now, but you can type them if needed
 const Hero = (): JSX.Element => {
@@ -14,7 +18,12 @@ const Hero = (): JSX.Element => {
           derivative crypto exchanges.
         </p>
 
-        <button className="hero-button">GET IN TOUCH</button>
+        <Button
+  variant="default"
+  className="bg-gradient-to-r from-[#6aa9ff] to-[#f4d06f] text-white text-sm rounded-[0px] py-[10px] px-[18px] whitespace-nowrap"
+>
+  Get In Touch
+</Button>
       </div>
     </section>
   );
