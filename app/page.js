@@ -1,5 +1,5 @@
 // app/page.js
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import MarketMaking from "../components/MarketMaking";
