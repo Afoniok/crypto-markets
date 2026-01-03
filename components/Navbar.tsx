@@ -1,48 +1,64 @@
-// components/Navbar.tsx
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { JSX } from "react";
+import { getNavbar } from "@/lib/getNavbar";
 
-export default function Navbar(): JSX.Element {
+type NavbarGlobal = {
+  logo: { url: string };
+  menu: { label: string; href: string }[];
+  cta: { text: string; href: string };
+};
+
+export default async function Navbar() {
+  const navbar: NavbarGlobal = await getNavbar();
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-gradient-to-b from-[#0b0e13d9] to-transparent backdrop-blur-md">
-      <div className="max-w-[1600px] mx-auto flex items-center justify-between flex-wrap px-6 lg:px-24 py-4">
-        
-        {/* Logo */}
-        <div className="flex items-center gap-2">
-          <img src="/logo-light.png" alt="Logo" className="w-32 lg:w-36 p-1" />
-        </div>
+    <nav className="fixed top-0 z-50 w-full backdrop-blur-md bg-gradient-to-b from-[#0b0e13]/80 to-transparent">
+      <div className="mx-auto max-w-[1440px] px-6 lg:px-16">
+        <div className="flex h-[72px] items-center justify-between">
+          
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
+          <img
+  src={`${process.env.NEXT_PUBLIC_PAYLOAD_URL}${navbar.logo.url}`}
+  alt="Logo"
+  className="h-7 w-auto opacity-95 hover:opacity-100 transition"
+/>
+          </Link>
 
-        {/* Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-sm text-[#cfd3da]">
-          <li className="hover:text-white transition-colors">
-            <Link href="#about">About Us</Link>
-          </li>
-          <li className="hover:text-white transition-colors">
-            <Link href="#services">Our Services</Link>
-          </li>
-          <li className="hover:text-white transition-colors">
-            <Link href="#work">Work With Us</Link>
-          </li>
-          <li className="hover:text-white transition-colors">
-            <Link href="/blog">Blog</Link>
-          </li>
-        </ul>
+          {/* Menu */}
+          <ul className="hidden md:flex items-center gap-10 text-[14px] text-[#b5bcc7]">
+            {navbar.menu.map((item, index) => (
+              <li key={index}>
+                <Link
+                  href={item.href}
+                  className="relative transition-colors hover:text-white"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <Link href="#contact">
+          {/* CTA */}
+          <Link href={navbar.cta.href} className="hidden md:block">
             <Button
               variant="default"
-              className="bg-gradient-to-r from-[#6aa9ff] to-[#f4d06f] text-white text-sm rounded-[20px] py-[10px] px-[18px] whitespace-nowrap"
+              className="
+                h-9
+                rounded-full
+                px-5
+                text-[13px]
+                font-medium
+                bg-gradient-to-r from-[#6aa9ff] to-[#f4d06f]
+                text-white
+                hover:opacity-90
+                transition
+              "
             >
-              Get In Touch
+              {navbar.cta.text}
             </Button>
           </Link>
         </div>
-
-        {/* Mobile Menu placeholder */}
-        {/* You can later add a hamburger menu component here for screens <768px */}
       </div>
     </nav>
   );
